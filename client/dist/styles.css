@@ -40,6 +40,7 @@ input {
     transition: 0.3s;
     padding: 20px 20px;
     display: block;
+    height: 200px;
 }
 
 #form {
@@ -54,6 +55,21 @@ input {
 #fullApp {
     max-width: 750px;
     margin: auto;
+}
+
+#mapButton {
+    position: relative;
+    background: #B0B1B3;
+    border-radius: 100px;
+    padding: 20px 60px;
+    color: #fff;
+    text-decoration: none;
+    font-size: .8em;
+    margin: 0 15px;
+    height: 50px;
+    left: 300px;
+    bottom: 70px;
+    line-height: 10px;
 }
 
 

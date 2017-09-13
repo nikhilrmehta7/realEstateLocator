@@ -122,6 +122,7 @@ class List extends React.Component {
                             <div id="distance1">Miles from Address 1: {addr.distance1}</div>
                             <div id="distance2">Miles from Address 2: {addr.distance2}</div>
                             <div id="totalDistance">Total Miles Away: {addr.totalDistance}</div>
+                            <button id="mapButton">Click to Load Map</button>
                         </div>
                     )})}
                 </div> : <div id="noResults">No Results...</div>}
