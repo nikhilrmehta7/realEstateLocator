@@ -4,7 +4,9 @@ import MapContainer from './mapContainer.jsx'
 import path from 'path';
 import axios from 'axios';
 import geolib from 'geolib';
-import googleMapsClient from '../../../mapsclient.js'
+var googleMapsClient = require('@google/maps').createClient({
+    key: process.env.GOOGLE_MAP_API 
+  });
 
 
 class List extends React.Component {
