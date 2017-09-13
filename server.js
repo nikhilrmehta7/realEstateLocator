@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path')
 var request = require('request');
 require('dotenv').config()
+const port = process.env.PORT || 3000;
 
 
 var app = express();
@@ -42,6 +43,6 @@ app.get('/location2/:addr2lat/:addr2lon', function(req,res) {
 })
 
 
-app.listen(3000, function(){
+app.listen(port, function(){
     console.log('listening on port 3000')
 });
