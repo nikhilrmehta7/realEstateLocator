@@ -105,7 +105,6 @@ class List extends React.Component {
     }
 
     render() {
-        var top = this;
         return(
             <div>
                 <div id="form">
@@ -120,8 +119,8 @@ class List extends React.Component {
                             {/* {addr.photos ? <img src={addr.photos[0].html_attributions.slice(9,addr.photos[0].html_attributions.indexOf('"',9))}></img> : <img src={addr.icon}></img>} */}
                             <div id="name">{addr.name}</div>
                             <div id="vicinity" onClick={this.loadMap}>{addr.vicinity}</div>
-                            <div id="distance1">Distance from Address 1: {addr.distance1}</div>
-                            <div id="distance2">Distance from Address 2: {addr.distance2}</div>
+                            <div id="distance1">Miles from Address 1: {addr.distance1}</div>
+                            <div id="distance2">Miles from Address 2: {addr.distance2}</div>
                             <div id="totalDistance">Total Miles Away: {addr.totalDistance}</div>
                         </div>
                     )})}
