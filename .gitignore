@@ -1,0 +1,4 @@
+node_modules
+.env
+mapsclient.js
+client/dist/bundle.js
