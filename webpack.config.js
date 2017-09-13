@@ -11,9 +11,10 @@ module.exports = {
         fs: 'empty'
     },
     plugins: [    
-        new webpack.DefinePlugin({           
-          GOOGLE_MAP_API: JSON.stringify(process.env.GOOGLE_MAP_API)      
-        })
+        new webpack.DefinePlugin(
+            {'process.env': {
+                'GOOGLE_MAP_API': JSON.stringify(process.env.GOOGLE_MAP_API)      
+        }})
     ],
     module: {
         loaders: [
