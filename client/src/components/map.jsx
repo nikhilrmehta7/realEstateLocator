@@ -16,6 +16,7 @@ export class Map extends React.Component {
     this.loadMap();
   }
 
+  //loads the google map with the marker
   loadMap() {
     if (this.props && this.props.google) {
       // google is available
@@ -25,6 +26,7 @@ export class Map extends React.Component {
       const mapRef = this.refs.map;
       const node = ReactDOM.findDOMNode(mapRef);
 
+      //initialized to dolores park
       var lat = this.props.address.lat || 37.759703;
       var lng = this.props.address.lng || -122.428093;
 

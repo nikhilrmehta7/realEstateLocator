@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/client/dist'));
 
+//gets the list of nearby real estate agencies from google api for address 1 and sends to front end
 app.get('/location1/:addr1lat/:addr1lon', function(req,res) {
     console.log(req.params.addr1lat, req.params.addr1lon)
     request.get(
@@ -27,6 +28,7 @@ app.get('/location1/:addr1lat/:addr1lon', function(req,res) {
     );
 })
 
+//gets the list of nearby real estate agencies from google api for address 2 and sends to front end
 app.get('/location2/:addr2lat/:addr2lon', function(req,res) {
     console.log(req.params.addr2lat, req.params.addr2lon)
     request.get(

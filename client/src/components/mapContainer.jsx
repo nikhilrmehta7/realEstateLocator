@@ -16,10 +16,8 @@ export class MapContainer extends React.Component {
     }
     return (
       <div>
-        <Map google={this.props.google} address={this.props.address}>
-          <Marker position={{lat: this.props.address.lat, lng: this.props.address.lng}} ></Marker>
-        </Map>
-        </div>
+        <Map google={this.props.google} address={this.props.address}></Map>
+      </div>
     );
   }
 }

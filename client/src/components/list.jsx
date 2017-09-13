@@ -29,8 +29,9 @@ class List extends React.Component {
         this.loadMap = this.loadMap.bind(this);
     }
 
+    //submits the address and returns a list of nearby real estate agencies to be processed by process address
     submitAddress() {
-        //to make sure we are setting state on the correct object
+        //list declared is to make sure we are setting state on the correct object
         var list = this;
         googleMapsClient.geocode({
             address: this.state.address1
@@ -72,6 +73,7 @@ class List extends React.Component {
         });
     }
 
+    //takes the list of nearby agencies, removes duplicates and calculates the distances between the addresses
     processAddress() {
         var fullList = this.state.addr1list.concat(this.state.addr2list)
         if(fullList.length > 0) {
@@ -94,6 +96,7 @@ class List extends React.Component {
                     finalList.push(fullList[i])
                 } 
             }
+            //orders the final list (NlogN)
             finalList.sort(function(a,b) {
                 return a.totalDistance - b.totalDistance
             })
@@ -102,6 +105,7 @@ class List extends React.Component {
         }
     }
 
+    //sets state on click to refresh map with new coordinates
     loadMap(coordinates) {
         this.setState({sentCoordinates: coordinates})
     }
